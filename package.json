@@ -1,28 +1,34 @@
 {
-  "name": "msteams-winston",
-  "version": "0.0.1",
-  "description": "Winston logger for Microsoft Teams integrations",
-  "main": "index.js",
-  "scripts": {
-    "test": "npm run test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Haeven/msteams-winston.git"
-  },
-  "keywords": [
-    "winston",
-    "msteams",
-    "microsoft",
-    "teams",
-    "logger",
-    "winston",
-    "logger"
-  ],
-  "author": "Haeven",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Haeven/msteams-winston/issues"
-  },
-  "homepage": "https://github.com/Haeven/msteams-winston#readme"
+	"name": "msteams-winston",
+	"version": "0.0.1",
+	"description": "Winston logger for Microsoft Teams integrations",
+	"main": "index.js",
+	"scripts": {
+		"test": "npm run test",
+		"start": "node index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Haeven/msteams-winston.git"
+	},
+	"keywords": [
+		"winston",
+		"msteams",
+		"microsoft",
+		"teams",
+		"logger",
+		"winston",
+		"logger"
+	],
+	"author": "Haeven",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Haeven/msteams-winston/issues"
+	},
+	"homepage": "https://github.com/Haeven/msteams-winston#readme",
+	"dependencies": {
+		"request": "^2.88.0",
+		"util-extend": "^1.0.3",
+		"winston": "^3.2.1"
+	}
 }
