@@ -1,4 +1,4 @@
-# msteams-winston
+# msteams-winston [![Build Status](https://travis-ci.org/Haeven/msteams-winston.svg?branch=master)](https://travis-ci.org/SukantGujar/msteams-winston)
 A Winston transport hook to log messages to a Microsoft Teams Webhook connector.
 
 Inspired by [winston-slacker](https://github.com/meerkats/winston-slacker) by [meerkats](https://github.com/meerkats).
