@@ -49,8 +49,13 @@ function send(message, callback) {
     json: true
   };
 
-  return request.post(requestParams, (err, res, body) => {
-      return (err || body !== 'ok') ? callback(err || new Error(body)) : callback(null, body));
+  return request.post(requestParams, function (err, res, body) {
+    if (err || body !== 'ok') {
+      return callback(err || new Error(body));
+    }
+
+    return callback(null, body);
+  });
 }
 
 util.inherits(MSTeams, winston.Transport);
@@ -63,7 +68,7 @@ winston.transports.MSTeams = MSTeams;
  * @param {string} Meta data for styling
  * @param {function} Callback function for post execution
  */
-MSTeams.prototype.log = (level, message, meta, callback) => {
+MSTeams.prototype.log = function (level, message, meta, callback) {
   return send.call(this, defaultFormatter(level, message, meta), callback);
 };
 
