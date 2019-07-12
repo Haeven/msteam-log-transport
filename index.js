@@ -22,18 +22,13 @@ function MSTeams(options) {
 
   this.name = options.name;
   this.webhook = options.webhook;
-  delete options.webhook;
   this.options = {
-	"webhook": options.webhook,
-	"username": options.username,
-	"level": options.level,
-	"summary": options.summary,
-	"themeColor": options.themeColor,
-	"sections": [{
-        "activityTitle": options.activityTitle,
-        "activitySubtitle": options.activitySubtitle,
-		"activityImage": options.activityImage,
-    }]
+    webhook: options.webhook,
+    username: options.username,
+    summary: options.summary,
+    themeColor: options.themeColor,
+    sections: options.sections || [],
+    potentialAction: options.potentialAction || []
   };
 }
 
@@ -47,19 +42,15 @@ function send(message, callback) {
     return callback(new Error('No message'));
   }
 
-  this.options.sections[0].text = JSON.stringify(message);
+  this.options.text = message;
   const requestParams = {
     url: this.webhook,
     body: this.options,
     json: true
   };
 
-  return request.post(requestParams, function (err, res, body) {
-    if (err || body !== 'ok') {
-      return callback(err || new Error(body));
-    }
-    return callback(null, body);
-  });
+  return request.post(requestParams, (err, res, body) => {
+      return (err || body !== 'ok') ? callback(err || new Error(body)) : callback(null, body));
 }
 
 util.inherits(MSTeams, winston.Transport);
@@ -72,7 +63,7 @@ winston.transports.MSTeams = MSTeams;
  * @param {string} Meta data for styling
  * @param {function} Callback function for post execution
  */
-MSTeams.prototype.log = function (level, message, meta, callback) {
+MSTeams.prototype.log = (level, message, meta, callback) => {
   return send.call(this, defaultFormatter(level, message, meta), callback);
 };
 
