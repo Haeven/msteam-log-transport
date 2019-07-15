@@ -4,7 +4,7 @@
 	"description": "Winston logger for Microsoft Teams integrations",
 	"main": "index.js",
 	"scripts": {
-		"test": "npm run test",
+		"test": "node test.js",
 		"start": "node index.js"
 	},
 	"repository": {
