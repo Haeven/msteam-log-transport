@@ -42,8 +42,8 @@ const msTeamsWinstonOptions = {
 };
 
 if (!hookUri) {
-    console.warn("No process.env.HOOK_URI set. Please set it to your Connector Webhook URI before running this test.");
-    process.exit();
+		console.warn("No process.env.HOOK_URI set. Please set it to your Connector Webhook URI before running this test.");
+		process.exit();
 }
 
 const logger = createLogger({
@@ -54,12 +54,12 @@ const logger = createLogger({
 });
 
 function runTest() {
-    logger.info('MSTeams will render markdown from messages. `Log a block of code` or some *italic text* \n > maybe add a quote block', { title: 'MSTeams supports the use of Markdown in messages.' });
-    try {
-        throw new Error('TEST');
-    } catch (e) {
-        logger.error(e.message);
-    }
+		logger.info('MSTeams will render markdown from messages. `Log a block of code` or some *italic text* \n > maybe add a quote block', { title: 'MSTeams supports the use of Markdown in messages.' });
+		try {
+				throw new Error('TEST');
+		} catch (e) {
+				logger.error(e.message);
+		}
 }
 
 runTest();

@@ -27,8 +27,10 @@
 	},
 	"homepage": "https://github.com/Haeven/msteams-winston#readme",
 	"dependencies": {
+		"axios": "^0.21.1",
 		"request": "^2.88.0",
 		"util-extend": "^1.0.3",
-		"winston": "^3.2.1"
+		"winston": "^3.2.1",
+		"winston-transport": "^4.4.0"
 	}
 }
