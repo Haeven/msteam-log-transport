@@ -20,7 +20,7 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Requirements](#Requirements)
-- [About the author](#about-the-author)
+- [About info](#Author-info)
 - [Contribution](#contribution)
 - [Support](#show-your-support)
 - [License](#license)
