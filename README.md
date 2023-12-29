@@ -19,10 +19,10 @@
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Screenshots](#screenshots)
+- [Requirements](#Requirements)
 - [About the author](#about-the-author)
 - [Contribution](#contribution)
-- [Support Us](#show-your-support)
+- [Support](#show-your-support)
 - [License](#license)
 
 # Description
