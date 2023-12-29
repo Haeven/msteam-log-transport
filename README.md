@@ -17,11 +17,10 @@
 # Table of Contents
 
 - [Description](#description)
-- [Installation](#installation)
+- [Installation](#install)
 - [Usage](#usage)
 - [Requirements](#Requirements)
 - [About info](#Author-info)
-- [Contribution](#contribution)
 - [Support](#show-your-support)
 - [License](#license)
 
